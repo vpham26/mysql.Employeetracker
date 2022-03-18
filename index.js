@@ -27,52 +27,52 @@ function firstPrompt() {
 		switch (task) {
 			case "View Employees":
 				viewEmployee();
-				break; // ⛔
+				break; // END
 			case "View Employees by Manager":
 				viewEmployeeByManager();
-				break; // ⛔
+				break; // END
 			case "View Employees by Department":
 				viewEmployeeByDepartment();
-				break; // ⛔
+				break; // END
 			case "View Departments":
 				viewDepartments();
-				break; // ⛔
+				break; // END
 			case "View Roles":
 				viewRoles();
-				break; // ⛔
+				break; // END
 			case "View Department Budget":
 				viewDepartmentBudget();
-				break; // ⛔
+				break; // END
 			case "Add Employee":
 				addEmployee();
-				break; // ⛔
+				break; // END
 			case "Add Department":
 				addDepartment();
-				break; // ⛔
+				break; // END
 			case "Add Role":
 				addRole();
-				break; // ⛔
+				break; // END
 			case "Update Employee Role":
 				updateEmployeeRole();
-				break; // ⛔
+				break; // END
 			case "Update Employee Manager":
 				updateEmployeeManager();
-				break; // ⛔
+				break; // END
 			case "Remove Employee":
 				deleteEmployee();
-				break; // ⛔
+				break; // END
 			case "Remove Department":
 				deleteDepartment();
-				break; // ⛔
+				break; // END
 			case "Remove Role":
 				deleteRole();
-				break; // ⛔
+				break; // END
 			case "Exit":
 				console.log(
 					`\n“Sic vis pasa, para bellum. If you want peace, prepare for war."\n- Roman general Vegetius`,
 				);
 				connection.end();
-				break; // ⛔
+				break; // END
 		}
 	});
 }
@@ -96,7 +96,7 @@ function viewEmployee() {
 		if (err) throw err;
 
 		console.table(res);
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 		firstPrompt();
 	});
@@ -142,7 +142,7 @@ function viewEmployeeByManager() {
 					if (err) throw err;
 
 					console.table("\nManager's subordinates:", res);
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 					firstPrompt();
 				});
@@ -186,7 +186,7 @@ function viewEmployeeByDepartment() {
 					if (err) throw err;
 
 					console.table("\nDepartment: ", res);
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 					firstPrompt();
 				});
@@ -203,7 +203,7 @@ function viewDepartments() {
 		res.forEach((department) => {
 			console.log(`ID: ${department.id} | ${department.name} Department`);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 		firstPrompt();
 	});
 }
@@ -219,7 +219,7 @@ function viewRoles() {
 				`ID: ${role.id} | Title: ${role.title}\n Salary: ${role.salary}\n`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 		firstPrompt();
 	});
 }
@@ -242,7 +242,7 @@ function viewDepartmentBudget() {
 				`Department: ${department.name}\n Budget: ${department.budget}\n`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 		firstPrompt();
 	});
 }
@@ -299,7 +299,7 @@ const addEmployee = () => {
 									if (err) throw err;
 									console.log("\n" + res.affectedRows + "employee created");
 									console.log(
-										"\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n",
+										"\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n",
 									);
 									viewEmployee();
 								},
@@ -321,7 +321,7 @@ function addDepartment() {
 				`You have added this department: ${answer.department.toUpperCase()}.`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 		viewDepartments();
 	});
 }
@@ -354,7 +354,7 @@ function addRole() {
 						if (err) throw err;
 
 						console.log("\n" + res.affectedRows + "role created");
-						console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+						console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 						viewRoles();
 					},
@@ -401,7 +401,7 @@ const updateEmployeeRole = () => {
 							console.log(
 								"\n" + "\n" + res.affectedRows + "Updated successfully!",
 							);
-							console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+							console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 							firstPrompt();
 						},
 					);
@@ -439,7 +439,7 @@ const updateEmployeeManager = () => {
 						console.log(
 							"\n" + "\n" + res.affectedRows + "Updated successfully!",
 						);
-						console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+						console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 						firstPrompt();
 					},
 				);
@@ -474,7 +474,7 @@ function deleteEmployee() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + "employee deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 					firstPrompt();
 				});
@@ -508,7 +508,7 @@ function deleteDepartment() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + "department deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 					viewDepartments();
 				});
@@ -539,7 +539,7 @@ function deleteRole() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + "role deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					console.log("\n<<<<<<<<<<<<<<<<<<<< END >>>>>>>>>>>>>>>>>>>>\n");
 
 					viewRoles();
 				});
