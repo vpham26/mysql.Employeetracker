@@ -17,8 +17,8 @@ App for business to be able to view and manage the departments, roles, and emplo
 - [Instructions](#instructions)
 - [Features](#features)
 - [Example Gif](#example-gif)
-- [Repository Link](#Repository)
-- [Licence](#Licence)
+- [Repository and Video](#repository-and-video)
+- [Licence](#licence)
 
 ## Installation
 
@@ -59,10 +59,11 @@ App for business to be able to view and manage the departments, roles, and emplo
 <img src="Assets/schema.png" width="500" />
 <img src="Assets/demo.gif" width="500" />
 
-## Repository
+## Repository and Video 
 
 - [Project Repo](https://github.com/vpham26/mysql.Employeetracker)
 
+- [Video](https://drive.google.com/file/d/1kj5UXF_IIC2DJMfTFKpu4Fk4nLXcxL5V/view)
 ## Licence
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
